@@ -1,0 +1,99 @@
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.card_img {
+    height: auto;
+    width: 225px;
+    border-radius: 30px;
+}
+
+.bookmark_icon {
+    opacity: 0.00001;
+    position: absolute;
+    top: 0;
+    right: 1rem;
+    padding: .5rem;
+    z-index: 100;
+    background-color: white;
+    border-radius: 1em;
+    transition: all .25s;
+    outline-width: 0;
+    border: none;
+}
+
+.card:hover .bookmark_icon {
+    margin-top: 1rem;
+    opacity: 1;
+}
+
+.card {
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    /* background-color: #9D00FF; */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.card > h3 {
+    margin: 0.5rem;
+    text-align: center;
+    font-size: large;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #928DAB;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.card-container {
+    display: grid;
+    width: 100%;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+}
+
+/* on screens bigger than 720px, make width of card-container 60% */
+@media (min-width: 1024px) {
+    .card-container {
+        width: 80%;
+    }
+}
+
+@media (min-width: 1400px) {
+    .card-container {
+        width: 60%;
+    }
+}
+
+.card-container__parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2rem;
+    width: 100%;
+}
+
