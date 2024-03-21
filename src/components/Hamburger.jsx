@@ -53,7 +53,7 @@ function Hamburger() {
                 <button><img width="50" height="50" src="https://img.icons8.com/ios/50/multiply.png" alt="multiply"/></button>
             </div>
             <div>
-                <div class="hamburger__left">
+                <div class="hamburger__left animate-hidden delayed">
                     {bookmarks.length>0? <h1>bookmarks</h1> : <h1>you have no bookmarks</h1>}
                     {
                     bookmarks.map( (bookmark, index) => {
@@ -61,17 +61,17 @@ function Hamburger() {
                     } )}
                 </div>
 
-                <div class="hamburger__right">
+                <div class="hamburger__right animate-hidden delayed">
                     <div>
-                    <h1>discover</h1> 
-                    <h1>about us</h1> 
-                    <h1>contact us</h1> 
+                    <h1 className="animate-ltr-hidden delayed">discover</h1> 
+                    <h1 className="animate-ltr-hidden delayed">about us</h1> 
+                    <h1 className="animate-ltr-hidden delayed">contact us</h1> 
                     </div>
                     <div class="icons">
-                <a href="" class="ham__icon"><ion-icon name="logo-facebook"></ion-icon></a>
-                <a href="" class="ham__icon"><ion-icon name="logo-instagram"></ion-icon></a>
-                <a href="" class="ham__icon"><ion-icon name="logo-octocat"></ion-icon></a>
-                <a href="" class="ham__icon"><ion-icon name="logo-whatsapp"></ion-icon></a>
+                <a href="" class="ham__icon animate-btt-hidden"><ion-icon name="logo-facebook"></ion-icon></a>
+                <a href="" class="ham__icon animate-btt-hidden"><ion-icon name="logo-instagram"></ion-icon></a>
+                <a href="" class="ham__icon animate-btt-hidden"><ion-icon name="logo-octocat"></ion-icon></a>
+                <a href="" class="ham__icon animate-btt-hidden"><ion-icon name="logo-whatsapp"></ion-icon></a>
         
     </div>
 

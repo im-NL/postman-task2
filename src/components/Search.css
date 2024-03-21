@@ -61,7 +61,6 @@ h2 {
   color: white;
   padding: 0.5rem 2rem 0.5rem 2rem;
   transition: all ease-in-out 0.25s;
-  /* add outer glow */
 }
 
 .search:focus-within {

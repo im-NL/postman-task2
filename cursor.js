@@ -36,6 +36,12 @@ function updateCursorEvents() {
           cursorBorder.style.mixBlendMode = "difference";
           cursorBorder.style.setProperty("--size", "100px");
         }
+        if (item.dataset.cursor === "pointer4") {
+          cursorBorder.style.backgroundColor = "white";
+          cursorBorder.style.mixBlendMode = "difference";
+          cursorBorder.style.setProperty("--size", "100px");
+          
+        }
       });
       item.addEventListener("mouseout", (e) => {
         cursorBorder.style.backgroundColor = "unset";
@@ -43,7 +49,44 @@ function updateCursorEvents() {
         cursorBorder.style.setProperty("--size", "50px");
       });
     });
+
+    document.querySelectorAll(".target").forEach((item) => 
+    
+      item.addEventListener("mouseover", () => {
+      cursorBorder.style.backgroundColor = "rgba(255, 255, 255, .6)";
+      cursorBorder.style.setProperty("--size", "30px");
+      cursorBorder.style.mixBlendMode = "unset";
+      let rect = document.querySelector(".targetChild").getBoundingClientRect();
+      // let x = rect.left + rect.width / 2;
+      // let y = rect.top + rect.height / 2;
+      let childx = rect.left + rect.width / 2;
+      let childy = rect.top + rect.height / 2;
+
+      // get coordinates of cursor 
+      let x = cursorPos.x;
+      let y = cursorPos.y;
+
+      // get vector from cursor to center of target
+      let vectorx = childx - x;
+      let vectory = childy - y;
+
+      vectorx/= -5
+      vectory/= -5
+
+      document.querySelector(".targetChild").style.transform = `translate(${vectorx}px, ${vectory}px)`;
+
+      item.addEventListener("mouseout", () => {
+        cursorBorder.style.backgroundColor = "unset";
+        cursorBorder.style.setProperty("--size", "50px");
+        document.querySelector(".targetChild").style.transform = `translate(0px, 0px)`;
+      });
+    }));
 }
+
+
+
+
+
 
 
 updateCursorEvents();

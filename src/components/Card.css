@@ -47,12 +47,18 @@ a {
     font-size: 1.5rem;
     /* background-color: #9D00FF; */
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     transition: 0.5s;
+}
+
+.card__anchor {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .card > h3 {
@@ -63,7 +69,7 @@ a {
 
 .card:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 10px #928DAB;
+    /* box-shadow: 0 0 10px #928DAB; */
     padding-top: 1rem;
     padding-bottom: 1rem;
 }

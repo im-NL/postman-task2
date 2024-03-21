@@ -30,7 +30,7 @@ function Card({ title, image, id }) {
         <button onClick={() => addBookmark()} className='bookmark_icon'>
           {id in bookmarks ? <img width="25" height="25" src="https://img.icons8.com/ios/50/multiply.png" alt="multiply"/> : <img width="25" height="25" src="https://img.icons8.com/ios-filled/50/bookmark-ribbon.png" alt="bookmark-ribbon"/>}
         </button>
-      <a href={`/movie.html?id=${id}`}>
+      <a className='card__anchor' href={`/movie.html?id=${id}`}>
         <Image src={"https://image.tmdb.org/t/p/w500/" + image} />
         {/* <img className='card_img' src={"https://image.tmdb.org/t/p/w500/" + image} alt="movie poster" /> */}
         <h3>{title}</h3>
