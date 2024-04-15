@@ -7,6 +7,7 @@ function Hamburger() {
     
     useEffect(() => {
         let bookmark = JSON.parse(localStorage.getItem("bookmark"));
+        if(!bookmark) return
         let bookmarkList = []
         let idList = [];
         let navHam = document.getElementById("hamburger");
@@ -57,7 +58,7 @@ function Hamburger() {
                     {bookmarks.length>0? <h1>bookmarks</h1> : <h1>you have no bookmarks</h1>}
                     {
                     bookmarks.map( (bookmark, index) => {
-                        return <div data-cursor={index%2?"pointer2":"pointer"} className="bookmark-elements glass"> <h3 key={ids[index]}>{bookmark}</h3> <img onClick={() => removeBookmark(ids[index])} width="50" height="50" src="https://img.icons8.com/ios/50/000000/multiply.png" alt="multiply"/> </div>
+                        return <div data-cursor={index%2?"pointer2":"pointer"} key={index} className="bookmark-elements glass"> <h3 key={ids[index]}>{bookmark}</h3> <img onClick={() => removeBookmark(ids[index])} width="50" height="50" src="https://img.icons8.com/ios/50/000000/multiply.png" alt="multiply"/> </div>
                     } )}
                 </div>
 

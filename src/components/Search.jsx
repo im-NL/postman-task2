@@ -60,7 +60,7 @@ function Search() {
                 <h2 className="animate-hidden delayed" data-cursor="pointer3">At one place.</h2>
             </div>
             <div className="stack search searchform" data-cursor="pointer">
-                      <button type="submit" class="search-btn">
+                      <button type="submit" className="search-btn">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"

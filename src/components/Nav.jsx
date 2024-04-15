@@ -6,7 +6,7 @@ function Nav() {
         <div className="navbar stack">
             <div className="nav__item_container">
                 <div className="navbar__logo">
-                    <p className="navbar__title">BLACKED</p>
+                    <p className="navbar__title">WatchMovies</p>
                 </div>
                 <div id="hamburger" className="target" data-cursor="check">
                 <img src="src/assets/burger.svg" className="icon targetChild navbar__ham"/>

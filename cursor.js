@@ -28,7 +28,7 @@ function updateCursorEvents() {
         }
         if (item.dataset.cursor === "pointer2") {
           cursorBorder.style.backgroundColor = "white";
-          cursorBorder.style.mixBlendMode = "difference";
+          // cursorBorder.style.mixBlendMode = "difference";
           cursorBorder.style.setProperty("--size", "80px");
         }
         if (item.dataset.cursor === "pointer3") {
