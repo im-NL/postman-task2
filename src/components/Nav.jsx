@@ -9,7 +9,7 @@ function Nav() {
                     <p className="navbar__title">WatchMovies</p>
                 </div>
                 <div id="hamburger" className="target" data-cursor="check">
-                <img src="src/assets/burger.svg" className="icon targetChild navbar__ham"/>
+                <img src="assets/burger.svg" className="icon targetChild navbar__ham"/>
                 </div>
             </div>
         </div>

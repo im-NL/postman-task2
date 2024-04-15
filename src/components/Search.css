@@ -80,6 +80,23 @@ h2 {
   background-color: transparent;
 }
 
+@media (max-width:600px) {
+  .search {
+    width: 50vw;
+  }
+
+  .search-container > div > h1 {
+    font-size: 4rem;
+  }
+
+  .search-container > div > h2 {
+    font-size: 3rem;
+    margin-top: 0.4em;
+    margin-bottom: 0.4em;
+  }
+
+}
+
 .searchbar:focus {
   border: none;
   border-width: 0;
